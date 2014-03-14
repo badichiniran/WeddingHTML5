@@ -9,8 +9,6 @@
     <meta name="author" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-
-
     <!-- CSS files begin-->
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700|Open+Sans+Condensed:700,300,300italic|Open+Sans:400,300italic,400italic,600,600italic,700,700italic,800,800italic|PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -40,7 +38,7 @@
    
 </head>
 
-<body>
+<body >
 
 <!-- Head
 ================================================== -->
@@ -48,6 +46,25 @@
 <div class="top-bar" style="height:5px">
     <div class="container">
         <div class="row">
+<!--            <div class="span6">
+              
+                <ul class="info-text pull-left">
+                    <li>
+                        <a href="#">נירן ורותם מתחתנים</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            ב 22.6 זה קורה
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           אולמי גאיה בחדרה
+                        </a>
+                       
+                    </li>
+                </ul>
+            </div>-->
             <div class="span6">
               
                 <ul class="socicon right top-w"></ul>
@@ -80,18 +97,50 @@
 
 <!-- Slider images
 ================================================== -->
-  <div id="header-container">
+  <div id="header-container" dir="rtl">
     
-		<div id="header" dir="rtl"  class="center">
-       
-			<h2 >נא הזן שם:</h2>
-            <input type="text" id="name" />
-            <br /><br /><br />
-           <input type="submit" value="אישור" id="Submit1" style="width: 150px; height: 40px; font-size:medium; border-style:double; border-color:black" onclick="ApproveBTN(0)"/></div>
+		<div id="header">
+
+				<img class="prev" src="assets/images/bt-prev.png"  alt="Previous Frame" />
+				<img class="next" src="assets/images/bt-next.png"  alt="Next Frame" />
+				
+			<div id="sequence">
+				<ul style="margin:0;">
+					<li>
+						<h2 class="title">רותם & נירן </h2>
+						<h3 class="subtitle">22.6</h3>
+						<img class="model animate-in" src="assets/images/invitationpic2.jpg" alt="Model 1" />
+					</li>
+					<li>
+						<h2 class="title">Yes Baby</h2>
+						<h3 class="subtitle">Finlay she said yes </h3>
+						<img class="model" src="assets/images/invitationpic.jpg" alt="Model 2" />
+					</li>
+					<li>
+						<h2 class="title">Come to our wedding </h2>
+						<h3 class="subtitle">Bring lots of cash </h3>
+						<img class="model" src="assets/images/invitationpic1.jpg" alt="Model 3" />
+					</li>
+                    <li class="frame4">
+						<h2 class="title">We promise will never .....</h2>
+						<h3 class="subtitle">Get divorce <br></h3>
+						<img class="model" src="assets/images/model1.png" alt="Model 4" />
+					</li>
+				</ul>
+			</div>
+           
             
 		</div>
+	</div>
     
-   
+    <div style="position:relative">
+     <ul id="nav">
+				<li><img src="assets/images/tn-model1.png" alt="Model 1" /></li>
+				<li><img src="assets/images/tn-model2.png" alt="Model 2" /></li>
+				<li><img src="assets/images/tn-model3.png" alt="Model 3" /></li>
+                <li><img src="assets/images/tn-model4.png" alt="Model 4" /></li>
+			</ul>
+    </div>
 
   </div>
  </div>
@@ -111,7 +160,16 @@
 <!-- Promo
 ================================================== -->
  
+ <div class="well no-padding-lr span12">
+     <div class="row promo-buy">
+         <div class="span9">
+             <h1 class="center">:נא אשר/י הגעתך </h1>
 
+         </div>
+  
+     
+ </div>
+ </div>
   
    
   </div>
@@ -133,7 +191,7 @@
       
    
       
-        <div class="span12 copy">
+      <div class="span12 copy">
        &copy; 2014 StudioNiran. All Rights Reserved.
       </div>
 
@@ -199,50 +257,7 @@
 	    });
 	</script>
 
-    	<script type="text/javascript">
 
-    	    function ApproveBTN(approve) {
-    	        name = $('#name').val();
-    	        if (approve) {
-    	            amount = $('#amount').val();
-    	          
-    	            if (name == '' || amount == '') {
-    	                alert("נא להזין שם ומספר מגיעים");
-    	                return;
-    	            }
-    	            if (amount <= 0 || amount > 9) {
-    	                alert("נא הכנס מספר בין 1 ל 9");
-    	                return;
-    	            }
-    	        }
-    	        else {
-    	            amount = 0;
-    	        
-    	            if (name == '') {
-    	                alert("נא להזין שם ");
-    	                return;
-    	            }
-    	        }
-
-    	        $.ajax({
-    	            type: "GET",
-    	            url: "InsertGuest.aspx",
-    	            data:
-                     { 'name': name, 'amount': amount },
-    	            contentType: "application/json; charset=utf-8",
-    	            dataType: "text",
-    	            success: function (res) {
-    	                alert("נרשמת בהצלחה");
-    	                window.location.replace('ThanksPage.html', 'flip', true, true);
-    	            }, // success
-    	            error: function (error) {
-    	                alert("שגיאה. נא לנסות שוב");
-    	            } //error
-    	        });   // ajax
-
-
-    	    }
-        </script>
         
     
 

@@ -40,7 +40,7 @@
    
 </head>
 
-<body dir="rtl">
+<body >
 
 <!-- Head
 ================================================== -->
@@ -88,9 +88,9 @@
             <input type="text" id="name" />
             <h2 >מספר מגיעים:</h2>
             <input type="number" name="quantity" min="1" max="9" id="amount">
-            <br /><br /><br />
+            <br /> <br />
            <input type="submit" value="אישור" id="Submit1" style="width: 150px; height: 40px; font-size:medium; border-style:double; border-color:black" onclick="ApproveBTN(1)"/></div>
-            
+             <br />
 		</div>
     
    
@@ -102,25 +102,20 @@
 </div>
 
 <div class="container">
- 
+<p></p>
 <!-- Home content
 ================================================== -->
 <!--<div class="divider"></div> -->
-    <p></p>
+    
    
 
 
 <!-- Promo
 ================================================== -->
- 
 
-  
-   
   </div>
   
-  <div class="divider"></div>
 
-    
 
 
      <!-- Footer
@@ -234,11 +229,11 @@
     	            contentType: "application/json; charset=utf-8",
     	            dataType: "text",
     	            success: function (res) {
-    	                alert("succses");
+    	                alert("נרשמת בהצלחה");
     	                window.location.replace('#ThanksPage', 'flip', true, true);
     	            }, // success
     	            error: function (error) {
-    	                alert("error-InsertProduct.aspx");
+    	                alert("שגיאה. נא לנסות שוב");
     	            } //error
     	        });   // ajax
 

@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -38,42 +38,40 @@
    
 </head>
 
-<body dir="rtl">
+<body>
 
 <!-- Head
 ================================================== -->
-
-<div class="top-bar" style="height:5px">
+<div class="top-bar">
     <div class="container">
         <div class="row">
-<!--            <div class="span6">
-              
+            <div class="span6">
+                <!-- text widget begin here -->
                 <ul class="info-text pull-left">
                     <li>
-                        <a href="#">× ×™×¨×Ÿ ×•×¨×•×ª× ××ª×—×ª× ×™×</a>
+                        <a href="#">ğéøï åøåúí îúçúğéí</a>
                     </li>
                     <li>
                         <a href="#">
-                            ×‘ 22.6 ×–×” ×§×•×¨×”
+                            á 22.6 æä ÷åøä
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                           ××•×œ××™ ×’××™×” ×‘×—×“×¨×”
+                           àåìîé âàéä áçãøä
                         </a>
                        
                     </li>
                 </ul>
-            </div>-->
+            </div>
             <div class="span6">
-              
+                <!-- social begin here -->
                 <ul class="socicon right top-w"></ul>
                 
             </div>
         </div>
     </div>
 </div>
-
 <!-- Logo / Menu
 ================================================== -->
 <header class="header">
@@ -101,13 +99,13 @@
     
 		<div id="header">
 
-				<img class="prev" src="assets/images/bt-prev.png" style="height:20px" alt="Previous Frame" />
-				<img class="next" src="assets/images/bt-next.png" style="height:20px" alt="Next Frame" />
+				<img class="prev" src="assets/images/bt-prev.png" alt="Previous Frame" />
+				<img class="next" src="assets/images/bt-next.png" alt="Next Frame" />
 				
 			<div id="sequence">
 				<ul style="margin:0;">
 					<li>
-						<h2 class="title">×¨×•×ª× & × ×™×¨×Ÿ </h2>
+						<h2 class="title">øåúí & ğéøï </h2>
 						<h3 class="subtitle">22.6</h3>
 						<img class="model animate-in" src="assets/images/model1.png" alt="Model 1" />
 					</li>
@@ -152,26 +150,16 @@
  
 <!-- Home content
 ================================================== -->
-<!--<div class="divider"></div> -->
-    <p></p>
-   
+<div class="divider"></div> 
 
 
 <!-- Promo
 ================================================== -->
  
  <div class="well no-padding-lr span12">
-     <div class="row promo-buy">
-         <div class="span9">
-             <h1 class="center">:× × ××©×¨/×™ ×”×’×¢×ª×š </h1>
-
-             &nbsp&nbsp&nbsp 
-             <input type="submit" value="××’×™×¢" style="width: 45%; height: 40px" onclick="arrivingBTN(1)" />&nbsp&nbsp&nbsp
-      <input type="submit" value=" ×œ× ××’×™×¢" style="width: 45%; height: 40px" onclick="arrivingBTN(0)" />
-
-         </div>
+ <div class="row promo-buy">
+  <div class="span9"><input type="submit" value="button" id="btn"  onclick="test()"/></div>
   
-     
  </div>
  </div>
   
@@ -180,8 +168,7 @@
   
   <div class="divider"></div>
 
-    
-
+    </div>
 
      <!-- Footer
       ================================================== -->
@@ -196,7 +183,7 @@
    
       
       <div class="span12 copy">
-       &copy; 2014 StudioNiran. All Rights Reserved.
+       &copy; 2014 StudioTsafi. All Rights Reserved.
       </div>
 
       </div>
@@ -221,54 +208,51 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/jquery.ui.totop.js" type="text/javascript"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $().UItoTop({ easingType: 'easeOutQuart' });
-        });
+    $(document).ready(function() {
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    });
     </script>
     <script type="text/javascript" src="assets/js/sslider-min.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript">	
+		
+		/mobile/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+		  if (!pageYOffset) window.scrollTo(0, 1);
+		}, 1000);
+		
+		$(document).ready(function(){
+			var options = {
+				nextButton: true,
+				prevButton: true,
+				pauseButton: true,
+				animateStartingFrameIn: true,
+				transitionThreshold: 250,
+				afterLoaded: function(){
+					$("#nav").fadeIn(100);
+					$("#nav li:nth-child("+(sequence.settings.startingFrameID)+") img").addClass("active");
+				},
+				beforeNextFrameAnimatesIn: function(){
+					$("#nav li:not(:nth-child("+(sequence.nextFrameID)+")) img").removeClass("active");
+					$("#nav li:nth-child("+(sequence.nextFrameID)+") img").addClass("active");
+				}
+			};
 
-	    /mobile/i.test(navigator.userAgent) && !location.hash && setTimeout(function () {
-	        if (!pageYOffset) window.scrollTo(0, 1);
-	    }, 1000);
-
-	    $(document).ready(function () {
-	        var options = {
-	            nextButton: true,
-	            prevButton: true,
-	            pauseButton: true,
-	            animateStartingFrameIn: true,
-	            transitionThreshold: 250,
-	            afterLoaded: function () {
-	                $("#nav").fadeIn(100);
-	                $("#nav li:nth-child(" + (sequence.settings.startingFrameID) + ") img").addClass("active");
-	            },
-	            beforeNextFrameAnimatesIn: function () {
-	                $("#nav li:not(:nth-child(" + (sequence.nextFrameID) + ")) img").removeClass("active");
-	                $("#nav li:nth-child(" + (sequence.nextFrameID) + ") img").addClass("active");
-	            }
-	        };
-
-	        var sequence = $("#sequence").sequence(options).data("sequence");
-
-	        $("#nav li").click(function () {
-	            if (!sequence.active) {
-	                $(this).children("img").removeClass("active").children("img").addClass("active");
-	                sequence.nextFrameID = $(this).index() + 1;
-	                sequence.goTo(sequence.nextFrameID);
-	            }
-	        });
-	    });
+			var sequence = $("#sequence").sequence(options).data("sequence");
+			
+			$("#nav li").click(function(){
+				if(!sequence.active){
+					$(this).children("img").removeClass("active").children("img").addClass("active");
+					sequence.nextFrameID = $(this).index()+1;
+					sequence.goTo(sequence.nextFrameID);
+				}
+			});
+		});
 	</script>
 
     	<script type="text/javascript">
 
-    	    function arrivingBTN(isArriving) {
-    	        if (isArriving)
-    	            window.location.replace('Arriving.html', 'flip', true, true);
-    	        else
-    	            window.location.replace('NotArriving.html', 'flip', true, true);
-    	    }
+    	    function test() {
+    	        window.location.replace('HTMLPage.htm', 'flip', true, true);
+            }
         </script>
         
     

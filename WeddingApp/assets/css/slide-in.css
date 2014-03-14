@@ -177,7 +177,7 @@
 .title {
 	font-size: 4em;
 	line-height:1em;
-	left: 65%;
+	right: 15%;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity=0);
 	width: 35%;
@@ -188,6 +188,7 @@
 	font-family: 'PT Sans', sans-serif;
 	font-weight:400;
 	text-transform:uppercase;
+   
 }
 
 .title span{ font-weight:700}

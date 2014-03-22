@@ -437,12 +437,12 @@ and (max-width : 368px) {
 		and (max-width : 320px)
 		and (orientation : portrait) { /*iphone portrait*/
 	#header{
-		height: 270px;
+		height: 230px; /*niran change*/
 	}
 	
 	.model{
-		min-width: 85%;  /*niran change*/
-		width: 85%;   /*niran change*/
+		min-width: 88%;  /*niran change*/
+		width: 88%;   /*niran change*/
 	}
 	
 	.model.animate-in{

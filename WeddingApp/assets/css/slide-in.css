@@ -439,7 +439,6 @@ and (max-width : 368px) {
 	#header{
 		height: 230px; /*niran change*/
 	}
-	
 	.model{
 		min-width: 88%;  /*niran change*/
 		width: 88%;   /*niran change*/

@@ -421,6 +421,17 @@ and (max-width : 418px) {
 	#header{
 		height: 270px;
 	}
+    	.model{
+		min-width: 88%;  /*niran change*/
+		width: 88%;   /*niran change*/
+	}
+       	.model.animate-in{
+		margin-left: -37.5%;
+	}
+	
+	.model.animate-out{
+		margin-left: -22.5%;
+	}
 }
 
 @media only screen
@@ -428,6 +439,7 @@ and (max-width : 368px) {
 	#header{
 		height: 225px;
 	}
+
 	.title{
 		font-size: 1.7em;
 	}
